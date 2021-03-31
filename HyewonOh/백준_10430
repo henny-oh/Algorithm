@@ -1,0 +1,13 @@
+from itertools import permutations
+
+inputs=input()
+lists=inputs.split(' ')
+
+A =int(lists[0]) 
+B = int(lists[1])
+C = int(lists[2])
+
+print((A+B)%C)
+print(((A%C) + (B%C))%C)
+print((A*B)%C)
+print(((A%C) * (B%C))%C)
