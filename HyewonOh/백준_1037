@@ -1,0 +1,15 @@
+num=int(input())
+lists=input()
+
+lists=lists.split(' ')
+lists = list(map(int, lists))
+
+
+if num!=1:
+    lists.sort()
+    answer=int(lists[0])*int(lists[-1])
+    print(answer)
+else:
+    answer=int(lists[0])*int(lists[0])
+    print(answer)
+
