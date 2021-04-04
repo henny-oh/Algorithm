@@ -1,0 +1,15 @@
+from itertools import permutations
+
+inputs=input()
+
+inputs=inputs.split(' ')
+inputs=list(map(int,inputs))
+
+lists=[num for num in range(1,inputs[0]+1)]
+
+answers=list( permutations(lists, inputs[1]))
+
+
+for answer in answers:
+    ans=str(answer).replace(',','').replace('(','').replace(')','')
+    print(ans)
