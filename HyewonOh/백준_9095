@@ -28,3 +28,5 @@ for i in range(0, inputs):
         ans+=factorial(len(each))/(factorial(each.count(1))*factorial(each.count(2))*factorial(each.count(3)))
         
     print(int(ans))
+    
+    
