@@ -1,0 +1,57 @@
+inputs=input()
+inputs=inputs.split(' ')
+
+A=int(inputs[0])
+B=int(inputs[1])
+
+arr=[1 for i in range(0,max(A,B)+1)]
+arr[0]=0
+arr[1]=0
+
+for i in range(2,max(A,B)+1):
+    
+    if arr[i]==1:
+        j=2
+        while(True):
+            if i*j>=len(arr): break
+            arr[i*j]=0
+            j+=1
+
+                
+number=[]
+
+for i in range(0,max(A,B)+1):
+    if arr[i]==1: number.append(i)
+        
+
+
+Aanswer=[]
+Banswer=[]
+
+for num in number:
+    if A==1: break
+    while(True):
+        if A%num==0:
+            Aanswer.append(num)
+            A/=num
+        else:break
+            
+for num in number:
+    if B==1: break
+    while(True):
+        if B%num==0:
+            Banswer.append(num)
+            B/=num
+        else:break
+
+
+minimum=1
+maximum=1
+for num in number:
+    if min(Aanswer.count(num),Banswer.count(num))!=0:
+        minimum*=(num**min(Aanswer.count(num),Banswer.count(num)))
+    if max(Aanswer.count(num),Banswer.count(num))!=0:    
+        maximum*=(num**max(Aanswer.count(num),Banswer.count(num)))
+    
+print(minimum)
+print(maximum)
