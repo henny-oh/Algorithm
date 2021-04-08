@@ -1,0 +1,16 @@
+count=int(input())
+answer=[]
+
+for seq in range(0,count):
+    inputs=int(input())
+    total=0
+    for num in range(1,inputs+1):
+        total+=int(inputs/num)*num
+            
+    answer.append(total)
+    
+for each in answer:
+    print(each)
+    
+    
+//파이썬은 시간초과-c++로 짜보기
