@@ -1,0 +1,14 @@
+import itertools
+
+while(True):
+    inputs=list(map(int,input().split(" ")))
+    if inputs[0]==0: break
+    num=inputs[0]
+    array=inputs[1:]
+
+    result = list(itertools.combinations(array,6))
+
+    for each in result:
+        print(str(each).replace("(","").replace(")","").replace(",",""))
+
+    print()
