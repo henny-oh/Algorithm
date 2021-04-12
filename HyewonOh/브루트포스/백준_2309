@@ -19,3 +19,4 @@ sorting.sort(reverse=False) //오름차순으로 정렬
 for each in sorting:    //출력
     print(each)
 
+
