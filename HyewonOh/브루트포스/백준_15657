@@ -1,0 +1,10 @@
+import itertools
+
+inputs=list(map(int,input().split(" ")))
+array=list(map(int,input().split(" ")))
+
+array.sort()
+combi=itertools.combinations_with_replacement(array,inputs[1])
+
+for each in list(combi):
+    print(str(each).replace("(","").replace(",","").replace(")",""))
