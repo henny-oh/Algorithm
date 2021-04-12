@@ -1,0 +1,12 @@
+inputs=list(map(int,input().split(" ")))
+
+num=0
+while(True):
+    A=15*num+inputs[0]
+
+    
+    if (A-inputs[1])%28==0 and (A-inputs[2])%19==0:
+            
+            print(A)
+            break
+    num+=1
