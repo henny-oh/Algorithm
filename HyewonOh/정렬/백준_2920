@@ -1,0 +1,39 @@
+-version1
+
+inputs=list(map(int,input().split(" ")))
+is_sorted=sorted(inputs)
+
+if is_sorted==inputs:
+    print("ascending")
+else:
+    is_sorted=sorted(inputs,reverse=True)
+    if is_sorted==inputs:
+        print("descending")
+    else:
+        print("mixed")
+        
+-version2
+inputs=list(map(int,input().split(" ")))
+
+asc=True
+des=True
+
+for i in range(0,7):
+    if inputs[i]>inputs[i+1]:
+        #rint(asc)
+        asc=False
+    else:
+        des=False
+        
+            
+    if asc==False and des ==False: 
+        break
+
+if asc:
+    print("ascending")
+else if des:
+    print("descending")
+else:
+    print("mixed")
+    
+    
