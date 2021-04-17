@@ -31,7 +31,7 @@ for i in range(0,7):
 
 if asc:
     print("ascending")
-else if des:
+elif des:
     print("descending")
 else:
     print("mixed")
