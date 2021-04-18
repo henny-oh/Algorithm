@@ -1,3 +1,4 @@
+version1.
 num=int(input())
 answer=[]
 for i in range(0,num):
@@ -21,6 +22,30 @@ for i in range(0,num):
                 m-=1
             else:
                 m=len(array)-1
+                
+    answer.append(num) 
+
+for each in answer:
+    print(each)
+
+version2.
+num=int(input())
+
+for i in range(0,num):
+    n,m=list(map(int,input().split(" ")))
+    array=list(map(int,input().split(" ")))
+    array=[(i,idx) for idx,i in enumerate(array)]
+    
+    num=0
+    while(len(array)!=0):
+        if array[0][0]==max(array,key=lambda x:x[0])[0]:
+            num+=1
+            if array[0][1]==m:
+                break
+            else:
+                array.pop
+        else:
+            array.append(array.pop(0))
                 
     answer.append(num) 
 
