@@ -1,0 +1,26 @@
+num=int(input())
+inputs=[i for i in range(1,num+1)]
+answer=[]
+stack=[]
+found=[]
+
+for i in range(0,num):
+    a=int(input())
+    answer.append(a)
+    
+for i in inputs:
+    stack.append(i)
+    found.append("+")
+    
+    try:
+        while(answer[0]==stack[-1]):
+            stack.pop()
+            answer.pop(0)
+            found.append("-")
+    except:
+        continue
+if len(stack)==0:
+    for i in found:
+        print(i)        
+else:
+    print("NO")
